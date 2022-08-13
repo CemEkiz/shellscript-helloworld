@@ -63,7 +63,7 @@
 
 
 # FILE CONDITIONS
-
+#
 ########
 # -d file	True if the file is a directory
 # -e file	True if the file exists
@@ -75,12 +75,25 @@
 # -w file	True if the file writable
 # -x file	True if the file is an executable
 ########
+#
+#FILE="test"
+#if [ -f "$FILE" ]
+#then
+#	echo "$FILE is a file"
+#else
+#	echo "$FILE is not a file"
+#fi
 
-FILE="test"
-if [ -f "$FILE" ]
-then
-	echo "$FILE is a file"
-else
-	echo "$FILE is not a file"
-fi
-
+# CASE STATEMENT
+read -p "Are you 21 or over? Y/N" ANSWER
+case "$ANSWER" in
+	[yY] | [yY][eE][sS])
+		echo "You can have a beer :)"
+		;;
+	[nN] | [nN][oO])
+		echo "Sorry, no drinking"
+		;;
+	*)
+		echo "Please enter y/yes or n/no"
+		;;
+esac

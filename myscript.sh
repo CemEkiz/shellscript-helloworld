@@ -85,15 +85,34 @@
 #fi
 
 # CASE STATEMENT
-read -p "Are you 21 or over? Y/N" ANSWER
-case "$ANSWER" in
-	[yY] | [yY][eE][sS])
-		echo "You can have a beer :)"
-		;;
-	[nN] | [nN][oO])
-		echo "Sorry, no drinking"
-		;;
-	*)
-		echo "Please enter y/yes or n/no"
-		;;
-esac
+#
+#read -p "Are you 21 or over? Y/N" ANSWER
+#case "$ANSWER" in
+#	[yY] | [yY][eE][sS])
+#		echo "You can have a beer :)"
+#		;;
+#	[nN] | [nN][oO])
+#		echo "Sorry, no drinking"
+#		;;
+#	*)
+#		echo "Please enter y/yes or n/no"
+#		;;
+#esac
+
+# LOOP
+#
+#NAMES="Brad Kevin Alice Mark"
+#for NAME in $NAMES
+#do
+#	echo "Hello $NAME"
+#done
+
+# FOR LOOP TO RENAME FILES
+#
+#FILE=$(ls *.txt)
+#NEW="new"
+#for FILE in $FILE
+#do
+#	echo "Renaming $FILE to new-$FILE"
+#	mv $FILE $NEW-$FILE
+#done
